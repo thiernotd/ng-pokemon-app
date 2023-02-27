@@ -6,6 +6,7 @@ import { BorederCardDirective } from './boreder-card.directive';
 import { PokemonTypeColorPipe } from './pokemon-type-color.pipe';
 import { RouterModule, Routes } from '@angular/router';
 import { PokemonService } from './pokemon.service';
+import { FormsModule } from '@angular/forms';
 
 
 const pokemonroutes: Routes = [
@@ -23,7 +24,8 @@ const pokemonroutes: Routes = [
     PokemonTypeColorPipe
   ],
   imports: [
-    CommonModule, 
+    CommonModule,
+    FormsModule,
     RouterModule.forChild(pokemonroutes)
   ],
   providers: [PokemonService]
